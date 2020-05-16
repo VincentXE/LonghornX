@@ -1,4 +1,4 @@
-![Longhorn Logo](https://i.ibb.co/kJz73mF/longhorn-2-1.png)
+![Longhorn Logo](https://i.ibb.co/JvhkGDM/longhornx.png)
 
 Longhorn X is a remake of the original windows debloater Longhorn. Longhorn X is made in C# instead of python, meaning it is even faster now and can be compiled much easier.
 
