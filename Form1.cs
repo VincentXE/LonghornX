@@ -54,5 +54,15 @@ namespace LonghornX
         {
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Longhorn X is a Windows Debloater made by VincentXII. \nPlease read the included README.md for more information", "Longhorn X Information");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

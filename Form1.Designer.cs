@@ -41,6 +41,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +107,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(525, 317);
+            this.button8.Location = new System.Drawing.Point(269, 346);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(135, 23);
             this.button8.TabIndex = 8;
@@ -122,7 +127,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(525, 375);
+            this.button10.Location = new System.Drawing.Point(525, 433);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(158, 23);
             this.button10.TabIndex = 10;
@@ -151,12 +156,62 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 276);
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(45, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.Size = new System.Drawing.Size(106, 15);
             this.label1.TabIndex = 13;
-            this.label1.Text = "label1";
+            this.label1.Text = "Longhorn Features";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(269, 374);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(149, 23);
+            this.button11.TabIndex = 14;
+            this.button11.Text = "Create Restore Point";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(269, 317);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Utility";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(525, 404);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(158, 23);
+            this.button12.TabIndex = 16;
+            this.button12.Text = "About Longhorn";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(525, 375);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(158, 23);
+            this.button13.TabIndex = 17;
+            this.button13.Text = "Changelog";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(525, 317);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 15);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Information";
             // 
             // Form1
             // 
@@ -164,6 +219,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(779, 537);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
@@ -176,6 +236,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "LonghornX v1.0";
@@ -200,6 +261,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label3;
     }
 }
 
