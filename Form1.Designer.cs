@@ -118,7 +118,6 @@
             this.label1.Size = new System.Drawing.Size(115, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "Please run as admin!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button8
             // 
