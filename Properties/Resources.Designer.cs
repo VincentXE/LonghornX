@@ -59,5 +59,24 @@ namespace LonghornX.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] setup {
+            get {
+                object obj = ResourceManager.GetObject("setup", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string setup_ps1 {
+            get {
+                return ResourceManager.GetString("setup.ps1", resourceCulture);
+            }
+        }
     }
 }

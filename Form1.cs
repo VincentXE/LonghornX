@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Management.Automation;
+using System.Collections.ObjectModel;
+using System.DirectoryServices;
 
 namespace LonghornX
 {
@@ -31,17 +26,28 @@ namespace LonghornX
 
         }
 
+        // "Windows Information" Button
         private void button9_Click(object sender, EventArgs e)
         {
-
+            Process.Start("winver.exe");
         }
-
+        // Setup Longhorn Button
         private void button8_Click(object sender, EventArgs e)
         {
-
+            // Run setup.ps1 (FIND WHERE SETUP.PS1 IS LOCATED)
+            var ps1File = Properties.Resources.setup;
+            var startInfo = new ProcessStartInfo()
+            {
+                FileName = "powershell.exe",
+                Arguments = $"-ExecutionPolicy unrestricted \"{ps1File}\"",
+                UseShellExecute = false
+            };
+            Process.Start(startInfo);
+            MessageBox.Show("Setup complete");
         }
 
-        private void button10_Click(object sender, EventArgs e) => Close();
+    // Exit Longhorn Button
+    private void button10_Click(object sender, EventArgs e) => Close();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -58,7 +64,7 @@ namespace LonghornX
 
         }
 
-         // About Longhorn Button
+         // "About Longhorn" Button
         private void button12_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Longhorn X is a Windows Debloater made by VincentXII. \nPlease read the included README.md for more information", "Longhorn X Information");
