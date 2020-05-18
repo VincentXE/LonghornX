@@ -2,6 +2,8 @@
 
 Longhorn X is a remake of the original windows debloater Longhorn. Longhorn X is made in C# instead of python, meaning it is even faster now and can be compiled much easier.
 
+To run Longhorn X, you must have .NET Core installed. Download it here: https://dotnet.microsoft.com/download
+
 Longhorn X features:
 
 * Block Windows Telemetry

@@ -121,6 +121,12 @@
   <data name="CHANGELOG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\CHANGELOG.md;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="createResP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\scripts\create-restore-point.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="remove_onedrive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\scripts\remove-onedrive.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="setup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\scripts\setup.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

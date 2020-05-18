@@ -78,7 +78,28 @@ namespace LonghornX
         //Create Restore Point Button
         private void button11_Click(object sender, EventArgs e)
         {
-
+            var longhornRestorePoint = new ProcessStartInfo()
+            {
+                FileName = "powershell.exe", 
+                Arguments = $" \"" + Encoding.Default.GetString(Properties.Resources.createResP) + "\"",
+                UseShellExecute = false
+            };
+            // This handles it completing 
+            var setupProcess = Process.Start(longhornRestorePoint);
+            setupProcess.EnableRaisingEvents = true; setupProcess.Exited += (sender, e) => { MessageBox.Show("Setup Complete", "Success"); };
+        }
+        // Removed Onedrive button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var onedriveRemove = new ProcessStartInfo()
+            {
+                FileName = "powershell.exe",
+                Arguments = $" -noexit -ExecutionPolicy Unrestricted  \"" + Encoding.Default.GetString(Properties.Resources.remove_onedrive) + "\"",
+                UseShellExecute = false
+            };
+            // This handles it completing 
+            var setupProcess = Process.Start(onedriveRemove);
+            setupProcess.EnableRaisingEvents = true; setupProcess.Exited += (sender, e) => { MessageBox.Show("Setup Complete", "Success"); };
         }
     }
 }

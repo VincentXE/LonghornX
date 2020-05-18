@@ -1,1 +1,1 @@
-Checkpoint-Computer -Description "Before Longhorn" -RestorePointType "MODIFY_SETTINGS"
+Checkpoint-Computer -Description 'BeforeLonghornX' -RestorePointType 'MODIFY_SETTINGS'
