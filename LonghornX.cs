@@ -1,10 +1,6 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
-using System.Management.Automation;
-using System.Collections.ObjectModel;
-using System.DirectoryServices;
 using System.Text;
 
 namespace LonghornX
@@ -48,8 +44,8 @@ namespace LonghornX
             setupProcess.Exited += (sender, e) => {MessageBox.Show("Setup Complete", "Success" );};
         }
 
-    // Exit Longhorn Button
-    private void button10_Click(object sender, EventArgs e) => Close();
+        // Exit Longhorn Button
+        private void button10_Click(object sender, EventArgs e) => Close();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -69,29 +65,20 @@ namespace LonghornX
          // "About Longhorn" Button
         private void button12_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Longhorn X is a Windows Debloater made by VincentXII. \nPlease read the included README.md for more information", "Longhorn X Information");
+            MessageBox.Show("Longhorn X is a Windows Debloater made by VincentXII. \nPlease read the included README.md for more information\n View Source Code at github.com/VincentXII/LonghornX", "Longhorn X Information");
         }
 
         // Changelog Button
         private void button13_Click(object sender, EventArgs e)
         {
-            // Super Janky way of getting the changelog.md file. Maybe clean up in future?
-            string _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
-            _filePath = Directory.GetParent(_filePath).FullName;
-            _filePath = Directory.GetParent(Directory.GetParent(_filePath).FullName).FullName;
-            _filePath += @"\CHANGELOG.MD";
-            //string _pleaseworkd = Encoding.GetString(Properties.Resources.CHANGELOG);
+            // Shows CHANGELOG.md in a message box
+            string changelogShow = Encoding.Default.GetString(Properties.Resources.CHANGELOG);
+            MessageBox.Show(changelogShow);
+        }
+        //Create Restore Point Button
+        private void button11_Click(object sender, EventArgs e)
+        {
 
-            Process.Start("notepad.exe", _filePath);
-            
-           
-            // For Future Use
-            /*
-            var process = new Process();
-            process.StartInfo.FileName = "notepad.exe";
-            process.StartInfo.Arguments = $"\"" + Encoding.Default.GetString(Properties.Resources.CHANGELOG) + "\"";
-            process.Start();
-            */
         }
     }
 }

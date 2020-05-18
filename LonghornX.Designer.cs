@@ -172,6 +172,7 @@
             this.button11.TabIndex = 14;
             this.button11.Text = "Create Restore Point";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label2
             // 
@@ -213,7 +214,7 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Information";
             // 
-            // Form1
+            // LonghornX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -238,7 +239,7 @@
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "LonghornX";
             this.Text = "LonghornX v1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
