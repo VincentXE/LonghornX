@@ -80,7 +80,18 @@ namespace LonghornX
             _filePath = Directory.GetParent(_filePath).FullName;
             _filePath = Directory.GetParent(Directory.GetParent(_filePath).FullName).FullName;
             _filePath += @"\CHANGELOG.MD";
+            //string _pleaseworkd = Encoding.GetString(Properties.Resources.CHANGELOG);
+
             Process.Start("notepad.exe", _filePath);
+            
+           
+            // For Future Use
+            /*
+            var process = new Process();
+            process.StartInfo.FileName = "notepad.exe";
+            process.StartInfo.Arguments = $"\"" + Encoding.Default.GetString(Properties.Resources.CHANGELOG) + "\"";
+            process.Start();
+            */
         }
     }
 }

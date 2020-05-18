@@ -63,6 +63,16 @@ namespace LonghornX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] CHANGELOG {
+            get {
+                object obj = ResourceManager.GetObject("CHANGELOG", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] setup {
             get {
                 object obj = ResourceManager.GetObject("setup", resourceCulture);
