@@ -5,12 +5,13 @@ using System.Diagnostics;
 using System.Management.Automation;
 using System.Collections.ObjectModel;
 using System.DirectoryServices;
+using System.Text;
 
 namespace LonghornX
 {
-    public partial class Form1 : Form
+    public partial class LonghornX : Form
     {
-        public Form1()
+        public LonghornX()
         {
             InitializeComponent();
         }
@@ -34,16 +35,17 @@ namespace LonghornX
         // Setup Longhorn Button
         private void button8_Click(object sender, EventArgs e)
         {
-            // Run setup.ps1 (FIND WHERE SETUP.PS1 IS LOCATED)
-            var ps1File = Properties.Resources.setup;
-            var startInfo = new ProcessStartInfo()
-            {
-                FileName = "powershell.exe",
-                Arguments = $"-ExecutionPolicy unrestricted \"{ps1File}\"",
-                UseShellExecute = false
-            };
-            Process.Start(startInfo);
-            MessageBox.Show("Setup complete");
+            // Run setup.ps1 
+             var longhornSetup = new ProcessStartInfo()
+             {
+                 FileName = "powershell.exe",
+                 Arguments = $"-ExecutionPolicy Unrestricted  \"" + Encoding.Default.GetString(Properties.Resources.setup) + "\"",
+                 UseShellExecute = false
+             };
+            // This handles it completing 
+            var setupProcess = Process.Start(longhornSetup);
+            setupProcess.EnableRaisingEvents = true;
+            setupProcess.Exited += (sender, e) => {MessageBox.Show("Setup Complete", "Success" );};
         }
 
     // Exit Longhorn Button
